@@ -1,0 +1,5 @@
+node_modules
+dist
+.git
+vendor/shell/src/**/*.test.ts
+*.log

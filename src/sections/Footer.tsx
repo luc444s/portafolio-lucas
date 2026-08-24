@@ -6,10 +6,6 @@ export default function Footer() {
           <h2 className="text-xl font-semibold tracking-tight text-foreground">
             ¿Trabajamos juntos?
           </h2>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Sistemas de gestión, modernización de legados o ese proyecto que
-            tengas pendiente.
-          </p>
         </div>
         <a
           href="mailto:sihuen8@gmail.com"
