@@ -1,6 +1,7 @@
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Stack from "./sections/Stack";
+import Story from "./sections/Story";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
         <Hero />
         <Projects />
         <Stack />
+        <Story />
       </main>
     </div>
   );
