@@ -63,7 +63,7 @@ export default function Hero() {
                 ? "noopener noreferrer"
                 : undefined
             }
-            className="flex h-10 w-10 items-center justify-center text-foreground/70 transition-colors hover:text-primary"
+            className="flex h-10 w-10 items-center justify-center border border-border bg-card text-foreground/70 transition-colors hover:border-primary hover:text-primary"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
               <path d={s.path} />
