@@ -2,7 +2,6 @@ import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Stack from "./sections/Stack";
 import Experience from "./sections/Experience";
-import Story from "./sections/Story";
 import ThemeBar from "./sections/ThemeBar";
 
 export default function App() {
@@ -14,7 +13,11 @@ export default function App() {
         <Projects />
         <Stack />
         <Experience />
-        <Story />
+
+        <footer className="mt-16 flex flex-wrap justify-between gap-2 border-t border-border pt-5 text-xs text-muted-foreground">
+          <span>© 2026 Sihuen Lucas — github.com/luc444s</span>
+          <span>Construido con React + Vite + @systutor/shell</span>
+        </footer>
       </main>
     </div>
   );
