@@ -1,6 +1,7 @@
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 import Stack from "./sections/Stack";
+import Experience from "./sections/Experience";
 import Story from "./sections/Story";
 import ThemeBar from "./sections/ThemeBar";
 
@@ -12,6 +13,7 @@ export default function App() {
         <Hero />
         <Projects />
         <Stack />
+        <Experience />
         <Story />
       </main>
     </div>
