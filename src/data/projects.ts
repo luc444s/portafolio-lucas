@@ -31,7 +31,7 @@ export const projects: Project[] = [
     tag: "público",
     tagKind: "public",
     description:
-      "Metodología ADD — \"Atomicity Applies to Change, not Ambition\": cada cambio se diseña, implementa y valida como unidad mínima, trazable y reversible (A.SPEC). Especificación normativa + plantilla canónica + 7 skills ejecutables (speccer, verifier, gitflows, CI). En uso por devs externos con feedback activo; 54 A.SPECs registradas solo en SYSTUTOR OSS.",
+      "Metodología ADD: cada cambio como unidad mínima, trazable y reversible. El ejemplo real de abajo es una A.SPEC del ERP.",
     meta: ["6 fases", "7 skills", "54 A.SPECs", "comunidad"],
   },
   {
