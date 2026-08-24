@@ -1,4 +1,5 @@
 import { projects, type Project } from "../data/projects";
+import CoreDiagram from "../components/CoreDiagram";
 
 function SectionTitle({ children }: { children: string }) {
   return (
@@ -68,6 +69,7 @@ export default function Projects() {
               className="block border border-border bg-card p-4 transition-colors hover:border-primary hover:text-primary"
             >
               {inner}
+              {p.name === "systutor-core" ? <CoreDiagram /> : null}
             </a>
           ) : (
             <article
