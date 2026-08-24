@@ -1,5 +1,6 @@
 import { projects, type Project } from "../data/projects";
 import CoreDiagram from "../components/CoreDiagram";
+import AspecExample from "../components/AspecExample";
 
 function SectionTitle({ children }: { children: string }) {
   return (
@@ -44,7 +45,7 @@ export default function Projects() {
                   {p.tag}
                 </span>
               </h3>
-              {p.name === "systutor-core" ? <CoreDiagram /> : null}
+              {p.name === "systutor-core" ? <CoreDiagram /> : p.name === "atomic-driven-development" ? <AspecExample /> : null}
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {p.description}
               </p>
