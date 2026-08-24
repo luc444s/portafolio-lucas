@@ -7,11 +7,12 @@ Todo lo que se muestra acá es real, verificable en github.com/luc444s.
 
 ## Quién soy
 
-Desarrollador con 5 años de experiencia, autodidacta y orientado a sistemas
-de gestión. Construí y mantengo un ERP multi-tenant en producción con
-arquitectura de plugins propia, un kernel open-source MIT consumido como
-dependencia de producción, y una metodología de desarrollo adoptada por
-otros devs.
+Ingeniero full-stack especializado en sistemas de gestión y modernización
+de legados. 5 años de experiencia construyendo y sosteniendo software en
+producción con clientes reales. Construí y mantengo un ERP multi-tenant
+con arquitectura de plugins propia, un kernel open-source MIT consumido
+como dependencia de producción, y una metodología de desarrollo adoptada
+por otros devs.
 
 Especialidad real: **modernizar sistemas legacy sin romper el negocio** —
 reversa de esquemas sin documentar, migración dominio por dominio con
@@ -19,6 +20,39 @@ validación y auditoría, y continuidad operativa para usuarios que vienen
 de software de escritorio.
 
 ---
+
+## Experiencia
+
+**Desarrollador — Tutora Business / Independiente** (5 años)
+Llevando hacia adelante el proyecto SYSTUTOR: desde el mantenimiento y
+reversa del sistema legacy hasta el diseño y construcción del ecosistema
+actual (kernel open-source, ERP multi-tenant con plugins, metodología ADD),
+con clientes migrados y en producción. Trabajo repartido entre el negocio
+familiar y proyectos independientes para clientes directos.
+
+**Soporte técnico e infraestructura — Tutora Business / Independiente**
+(en paralelo)
+Donde aprendí que todo software corre sobre hardware que alguien tiene
+que mantener vivo. Diagnóstico y reparación de equipos a nivel componente,
+rescate de datos, redes y puesta a punto de máquinas de producción.
+Ningún sistema falla solo: cada bug que llegaba con el equipo apagado me
+enseñó a escribir software pensando en el día en que algo se rompe —
+por eso la auditoría, los backups y la trazabilidad no son features acá:
+son religión.
+
+**Desarrollo WordPress y PHP a medida — Independiente**
+Sitios y sistemas de gestión sobre WordPress con plugins personalizados
+cuando el estándar no alcanza:
+
+- **ardiffx.com** — tienda WooCommerce con sistema propio de tokens únicos
+  para links de descarga segura (mismo problema que después resolví a nivel
+  kernel en systutor: entregas digitales con acceso controlado y trazable)
+- **gestiongasesindustriales.com** — presencia web y gestión para el negocio
+  de gases industriales
+- **systutor.com** — sitio del proyecto SYSTUTOR
+
+Plugins PHP hechos a medida integrados con WooCommerce, pasarelas y flujos
+de negocio propios de cada cliente.
 
 ## Proyectos destacados
 
