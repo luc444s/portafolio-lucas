@@ -1,4 +1,4 @@
-eimport "tailwindcss";
+@import "tailwindcss";
 
 /*
   systutor-themes inyecta --background, --primary, etc. en runtime
