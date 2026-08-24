@@ -1,5 +1,6 @@
 export type Project = {
   name: string;
+  url?: string;
   tag: string;
   tagKind: "production" | "private" | "public";
   description: string;
@@ -9,6 +10,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: "systutor-core",
+    url: "https://github.com/luc444s/systutor-core",
     tag: "producción · MIT",
     tagKind: "production",
     description:
@@ -25,6 +27,7 @@ export const projects: Project[] = [
   },
   {
     name: "atomic-driven-development",
+    url: "https://github.com/luc444s/atomic-driven-development",
     tag: "público",
     tagKind: "public",
     description:
@@ -33,6 +36,7 @@ export const projects: Project[] = [
   },
   {
     name: "systutor-shell",
+    url: "https://github.com/luc444s/systutor-shell",
     tag: "MIT",
     tagKind: "public",
     description:
@@ -41,6 +45,7 @@ export const projects: Project[] = [
   },
   {
     name: "systutor-themes",
+    url: "https://github.com/luc444s/systutor-themes",
     tag: "MIT",
     tagKind: "public",
     description:
@@ -49,6 +54,7 @@ export const projects: Project[] = [
   },
   {
     name: "spanel",
+    url: "https://github.com/luc444s/spanel",
     tag: "público",
     tagKind: "public",
     description:

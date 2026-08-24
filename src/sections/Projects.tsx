@@ -26,7 +26,18 @@ export default function Projects() {
             className="border border-border bg-card p-4 transition-colors hover:border-primary"
           >
             <h3 className="flex items-baseline justify-between gap-2 text-base font-semibold">
-              {p.name}
+              {p.url ? (
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-primary"
+                >
+                  {p.name}
+                </a>
+              ) : (
+                p.name
+              )}
               <span
                 className={`whitespace-nowrap text-[10.5px] font-bold uppercase tracking-wider ${TAG_COLORS[p.tagKind]}`}
               >
