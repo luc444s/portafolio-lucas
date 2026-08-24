@@ -15,7 +15,7 @@ export default function Footer() {
           href="mailto:sihuen8@gmail.com"
           className="border border-primary px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
         >
-          sihuen8@gmail.com
+          Enviar correo
         </a>
       </div>
 
