@@ -5,30 +5,25 @@ export default function Stack() {
   return (
     <section className="mt-14">
       <SectionTitle>Stack</SectionTitle>
-      <table className="w-full border-collapse border border-border bg-card text-sm">
-        <thead>
-          <tr>
-            <th className="bg-primary px-3.5 py-2.5 text-left text-xs uppercase tracking-wider text-primary-foreground">
-              Área
-            </th>
-            <th className="bg-primary px-3.5 py-2.5 text-left text-xs uppercase tracking-wider text-primary-foreground">
-              Tecnologías
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {stack.map((row) => (
-            <tr key={row.area} className="border-b border-border last:border-b-0">
-              <td className="whitespace-nowrap px-3.5 py-2.5 font-semibold">
-                {row.area}
-              </td>
-              <td className="px-3.5 py-2.5 text-muted-foreground">
-                {row.technologies}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="flex flex-col gap-4">
+        {stack.map((row) => (
+          <div key={row.area} className="sm:flex sm:items-baseline sm:gap-6">
+            <h3 className="mb-1.5 shrink-0 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground sm:mb-0 sm:w-36">
+              {row.area}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {row.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="border border-border bg-accent px-2.5 py-1 text-[12.5px] text-foreground/80"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
