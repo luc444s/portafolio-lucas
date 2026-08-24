@@ -21,33 +21,18 @@ const SOCIALS = [
   },
 ];
 
-const CHIPS = [
-  "Linux",
-  "Python",
-  "FastAPI",
-  "PostgreSQL",
-  "React",
-  "TypeScript",
-  "Vite",
-  "Docker",
-  "Zellij",
-  "Neovim",
-  "SSH",
-  "ADD/A.SPEC",
-];
-
 export default function Hero() {
   return (
     <div>
-      <span className="inline-block rounded-none border border-border px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
-        Portafolio
-      </span>
-      <h1 className="mt-3 text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
+      <p className="text-base text-muted-foreground">
+        Hola, mi nombre es
+      </p>
+      <h1 className="mt-2 text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
         Lucas
       </h1>
-      <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground sm:text-base">
-        Ingeniero full-stack especializado en sistemas de gestión y
-        modernización de legados. 5 años de experiencia construyendo y
+      <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
+        Soy desarrollador de software full-stack, especializado en sistemas de
+        gestión y modernización de legados. Llevo 5 años construyendo y
         sosteniendo software en producción con clientes reales.
       </p>
 
@@ -69,17 +54,6 @@ export default function Hero() {
               <path d={s.path} />
             </svg>
           </a>
-        ))}
-      </div>
-
-      <div className="mt-6 flex flex-wrap gap-2">
-        {CHIPS.map((chip) => (
-          <span
-            key={chip}
-            className="border border-border bg-accent px-2.5 py-1 text-[12.5px] text-muted-foreground"
-          >
-            {chip}
-          </span>
         ))}
       </div>
     </div>
