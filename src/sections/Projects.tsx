@@ -20,45 +20,64 @@ export default function Projects() {
     <section className="mt-14">
       <SectionTitle>Proyectos</SectionTitle>
       <div className="grid gap-3.5 sm:grid-cols-2">
-        {projects.map((p) => (
-          <article
-            key={p.name}
-            className="border border-border bg-card p-4 transition-colors hover:border-primary"
-          >
-            <h3 className="flex items-baseline justify-between gap-2 text-base font-semibold">
-              {p.url ? (
-                <a
-                  href={p.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-primary"
-                >
-                  {p.name}
-                </a>
-              ) : (
-                p.name
-              )}
-              <span
-                className={`whitespace-nowrap text-[10.5px] font-bold uppercase tracking-wider ${TAG_COLORS[p.tagKind]}`}
-              >
-                {p.tag}
-              </span>
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {p.description}
-            </p>
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {p.meta.map((m) => (
+        {projects.map((p) => {
+          const inner = (
+            <>
+              <h3 className="flex items-baseline justify-between gap-2 text-base font-semibold">
+                {p.name}
+                {p.url ? (
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden
+                    className="h-3.5 w-3.5 shrink-0 fill-none stroke-current opacity-50"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M7 17 17 7M7 7h10v10" />
+                  </svg>
+                ) : null}
                 <span
-                  key={m}
-                  className="bg-accent px-2 py-0.5 text-[11px] text-muted-foreground"
+                  className={`ml-auto whitespace-nowrap text-[10.5px] font-bold uppercase tracking-wider ${TAG_COLORS[p.tagKind]}`}
                 >
-                  {m}
+                  {p.tag}
                 </span>
-              ))}
-            </div>
-          </article>
-        ))}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {p.description}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {p.meta.map((m) => (
+                  <span
+                    key={m}
+                    className="bg-accent px-2 py-0.5 text-[11px] text-muted-foreground"
+                  >
+                    {m}
+                  </span>
+                ))}
+              </div>
+            </>
+          );
+
+          return p.url ? (
+            <a
+              key={p.name}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block border border-border bg-card p-4 transition-colors hover:border-primary hover:text-primary"
+            >
+              {inner}
+            </a>
+          ) : (
+            <article
+              key={p.name}
+              className="border border-border bg-card p-4 transition-colors hover:border-primary"
+            >
+              {inner}
+            </article>
+          );
+        })}
       </div>
     </section>
   );
