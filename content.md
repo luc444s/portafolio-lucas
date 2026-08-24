@@ -7,10 +7,11 @@ Todo lo que se muestra acá es real, verificable en github.com/luc444s.
 
 ## Quién soy
 
-Desarrollador autodidacta orientado a sistemas de gestión. Construí y
-mantengo un ERP multi-tenant en producción con arquitectura de plugins propia,
-un kernel open-source MIT consumido como dependencia de producción, y una
-metodología de desarrollo adoptada por otros devs.
+Desarrollador con 5 años de experiencia, autodidacta y orientado a sistemas
+de gestión. Construí y mantengo un ERP multi-tenant en producción con
+arquitectura de plugins propia, un kernel open-source MIT consumido como
+dependencia de producción, y una metodología de desarrollo adoptada por
+otros devs.
 
 Especialidad real: **modernizar sistemas legacy sin romper el negocio** —
 reversa de esquemas sin documentar, migración dominio por dominio con
@@ -21,7 +22,7 @@ de software de escritorio.
 
 ## Proyectos destacados
 
-### SYSTUTOR OSS — ERP multi-tenant (privado · producción)
+### SYSTUTOR Gases Industriales — ERP multi-tenant (privado · producción)
 Sistema operativo para empresa de gas envasado: envases, planificación,
 despacho, CRM, stock, cotizaciones, compras. ~150.000 líneas propias en el
 ecosistema. 7 plugins aislados con versionado y migraciones propias.
@@ -71,17 +72,13 @@ puenteado al legacy. Ver history/historia_lucas.md.
 
 | Área | Tecnologías |
 |---|---|
-| Backend | Python, FastAPI, SQLAlchemy, Alembic, PostgreSQL, Redis |
-| Arquitectura | Multi-tenancy, RBAC, eventos/outbox, runtime de plugins, ADRs |
+| Backend | Python, FastAPI, SQLAlchemy, Alembic, PostgreSQL |
+| Base de datos | PostgreSQL (modelado, migraciones, tuning básico) |
 | Frontend | React 18/19, TypeScript, Vite, componentes propios (shadcn-style), Monaco |
-| DevOps | Docker, Docker Compose, SSH, Linux (desarrollo primario en Termux/Android), CI |
+| Arquitectura | Multi-tenancy, RBAC, eventos/outbox, runtime de plugins, ADRs |
+| DevOps | Docker, Docker Compose, CI |
+| Entorno diario | Linux, Zellij, Neovim, SSH, Git |
 | Metodología | ADD/A.SPEC, SDD, GitFlow, ADRs, specs funcionales |
-
-## Entorno particular
-
-Desarrollo primario en **Termux sobre Android**: Python 3.12, PostgreSQL,
-Redis, pnpm, ruff corriendo nativo en un teléfono. El installer de SYSTUTOR
-soporta x86, ARM y Termux.
 
 ---
 
