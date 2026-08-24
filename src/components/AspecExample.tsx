@@ -13,7 +13,7 @@ export default function AspecExample() {
   return (
     <svg
       viewBox="0 0 400 92"
-      className="mt-3 w-full"
+      className="my-3 w-full"
       role="img"
       aria-label="Ejemplo de una A.SPEC real del proyecto"
     >

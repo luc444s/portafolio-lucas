@@ -13,7 +13,7 @@ export default function CoreDiagram() {
   return (
     <svg
       viewBox="0 0 400 200"
-      className="mt-3 w-full"
+      className="my-3 w-full"
       role="img"
       aria-label="systutor-core como base: kernel del que dependen la app y la api de gestión"
     >
