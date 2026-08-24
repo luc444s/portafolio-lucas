@@ -24,11 +24,8 @@ const SOCIALS = [
 export default function Hero() {
   return (
     <div>
-      <p className="text-base text-muted-foreground">
-        Hola, mi nombre es
-      </p>
-      <h1 className="mt-2 text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
-        Lucas
+      <h1 className="text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
+        Hola, mi nombre es Sihuen Lucas
       </h1>
       <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
         Soy desarrollador de software full-stack, especializado en sistemas de
