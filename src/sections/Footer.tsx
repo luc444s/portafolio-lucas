@@ -8,7 +8,7 @@ export default function Footer() {
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
             Sistemas de gestión, modernización de legados o ese proyecto que
-            tenés pendiente.
+            tengas pendiente.
           </p>
         </div>
         <a
