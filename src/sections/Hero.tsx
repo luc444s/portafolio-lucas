@@ -39,13 +39,13 @@ const CHIPS = [
 export default function Hero() {
   return (
     <header>
-      <span className="inline-block rounded-none border border-primary px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-widest text-primary">
+      <span className="inline-block rounded-none border border-border px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
         Portafolio
       </span>
-      <h1 className="mt-3 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+      <h1 className="mt-3 text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
         Lucas
       </h1>
-      <p className="mt-3 max-w-[60ch] leading-relaxed text-muted-foreground">
+      <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground sm:text-base">
         Ingeniero full-stack especializado en sistemas de gestión y
         modernización de legados. 5 años de experiencia construyendo y
         sosteniendo software en producción con clientes reales.
@@ -63,7 +63,7 @@ export default function Hero() {
                 ? "noopener noreferrer"
                 : undefined
             }
-            className="flex h-10 w-10 items-center justify-center border border-border bg-card text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+            className="flex h-10 w-10 items-center justify-center border border-border bg-card text-foreground/70 transition-colors hover:border-primary hover:text-primary"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
               <path d={s.path} />
