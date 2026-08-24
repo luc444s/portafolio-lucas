@@ -1,28 +1,26 @@
 {
-  "name": "@systutor/shell",
+  "name": "portafolio-lucas",
+  "private": true,
   "version": "0.1.0",
-  "description": "Frontend core de SYSTUTOR: componentes UI genericos, consola operativa y clientes de infraestructura. Sin logica de negocio.",
-  "license": "MIT",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
-  "files": [
-    "src"
-  ],
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
-  "peerDependencies": {
-    "react": "^18.3.0 || ^19.0.0",
-    "react-dom": "^18.3.0 || ^19.0.0"
+  "dependencies": {
+    "@systutor/shell": "file:./vendor/shell",
+    "clsx": "^2.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.6.0"
   },
-  "peerDependenciesMeta": {
-    "@monaco-editor/react": { "optional": true },
-    "@react-pdf-viewer/core": { "optional": true },
-    "leaflet": { "optional": true },
-    "monaco-editor": { "optional": true },
-    "pdfjs-dist": { "optional": true },
-    "react-leaflet": { "optional": true },
-    "react-router-dom": { "optional": true },
-    "sonner": { "optional": true }
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0"
   }
 }
