@@ -10,10 +10,10 @@ type Theme = ThemeName;
 const THEME_ORDER: Theme[] = [...THEME_NAMES];
 
 function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "dark";
+  if (typeof window === "undefined") return "catpuccin_mocha";
   const stored = window.localStorage.getItem(STORAGE_KEY) as Theme | null;
   if (stored && (THEME_NAMES as string[]).includes(stored)) return stored;
-  return "dark";
+  return "catpuccin_mocha";
 }
 
 function applyTheme(theme: Theme) {
