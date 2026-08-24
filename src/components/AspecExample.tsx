@@ -1,3 +1,4 @@
+const MUTED = { fill: "hsl(var(--muted-foreground))" };
 const FG = { fill: "hsl(var(--foreground))" };
 const PRIMARY = "hsl(var(--primary))";
 
@@ -40,6 +41,29 @@ export default function AspecExample() {
           </text>
         </g>
       ))}
+
+      <line x1="1" y1="70" x2="399" y2="70" stroke="hsl(var(--border))" strokeWidth="1" />
+      {["DEFINE", "BOUND", "CONTRACT", "IMPLEMENT", "VERIFY", "INTEGRATE"].map(
+        (step, i) => (
+          <g key={step}>
+            <text
+              x={14 + i * 66}
+              y={84}
+              fontSize="7.5"
+              fontWeight="600"
+              textAnchor={i === 0 ? "start" : i === 5 ? "end" : "middle"}
+              style={i === 4 ? { fill: PRIMARY } : MUTED}
+            >
+              {step}
+            </text>
+            {i < 5 ? (
+              <text x={14 + 62 + i * 66} y={84} fontSize="7.5" style={MUTED}>
+                →
+              </text>
+            ) : null}
+          </g>
+        ),
+      )}
     </svg>
   );
 }
