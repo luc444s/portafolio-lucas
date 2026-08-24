@@ -38,7 +38,7 @@ const CHIPS = [
 
 export default function Hero() {
   return (
-    <header>
+    <div>
       <span className="inline-block rounded-none border border-border px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
         Portafolio
       </span>
@@ -82,6 +82,6 @@ export default function Hero() {
           </span>
         ))}
       </div>
-    </header>
+    </div>
   );
 }
