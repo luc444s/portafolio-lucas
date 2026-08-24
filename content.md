@@ -40,9 +40,9 @@ enseñó a escribir software pensando en el día en que algo se rompe —
 por eso la auditoría, los backups y la trazabilidad no son features acá:
 son religión.
 
-**Desarrollo WordPress y PHP a medida — Independiente**
-Sitios y sistemas de gestión sobre WordPress con plugins personalizados
-cuando el estándar no alcanza:
+**Desarrollo WordPress y PHP a medida — Independiente** (1 año)
+Un año de sitios y sistemas sobre WordPress con plugins personalizados
+antes de volver de lleno a la programación:
 
 - **ardiffx.com** — tienda WooCommerce con sistema propio de tokens únicos
   para links de descarga segura (mismo problema que después resolví a nivel

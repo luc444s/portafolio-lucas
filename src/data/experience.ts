@@ -16,9 +16,9 @@ export const experience: Experience[] = [
   {
     role: "WordPress y PHP a medida",
     org: "Independiente",
-    period: "en paralelo",
+    period: "1 año",
     description:
-      "Sitios y sistemas de gestión sobre WordPress con plugins personalizados cuando el estándar no alcanza: ardiffx.com (tienda WooCommerce con tokens únicos para links de descarga segura), gestiongasesindustriales.com y systutor.com.",
+      "Un año construyendo sitios y sistemas de gestión sobre WordPress con plugins personalizados cuando el estándar no alcanzaba: ardiffx.com (tienda WooCommerce con tokens únicos para links de descarga segura), gestiongasesindustriales.com y systutor.com — antes de volver de lleno a la programación.",
   },
   {
     role: "Soporte técnico e infraestructura",
