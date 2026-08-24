@@ -16,7 +16,7 @@ const SOCIALS = [
   { title: "YouTube", href: "#", path: YOUTUBE_PATH },
   {
     title: "WhatsApp",
-    href: "https://wa.me/50600000000",
+    href: "https://wa.me/506968313965",
     path: WHATSAPP_PATH,
   },
 ];
