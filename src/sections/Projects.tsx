@@ -46,7 +46,18 @@ export default function Projects() {
                   {p.tag}
                 </span>
               </h3>
-              {p.name === "systutor-core" ? <CoreDiagram /> : p.name === "atomic-driven-development" ? <AspecExample /> : p.name === "systutor-shell" ? <ShellKit /> : null}
+              <span
+                onClick={(e) => e.preventDefault()}
+                className="block cursor-default"
+              >
+                {p.name === "systutor-core" ? (
+                  <CoreDiagram />
+                ) : p.name === "atomic-driven-development" ? (
+                  <AspecExample />
+                ) : p.name === "systutor-shell" ? (
+                  <ShellKit />
+                ) : null}
+              </span>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {p.description}
               </p>
