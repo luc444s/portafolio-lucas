@@ -16,14 +16,24 @@ const SOCIALS = [
 export default function Hero() {
   return (
     <div>
-      <h1 className="text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
-        Hola, mi nombre es Sihuen Lucas
-      </h1>
-      <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
-        Soy desarrollador de software full-stack, especializado en sistemas de
-        gestión y modernización de legados. Llevo 5 años construyendo y
-        sosteniendo software en producción con clientes reales.
-      </p>
+      <div className="flex items-start gap-5 sm:gap-7">
+        <img
+          src="/portafolio.jpg"
+          alt="Sihuen Lucas"
+          className="h-28 w-28 shrink-0 border border-border object-cover object-top sm:h-40 sm:w-36"
+        />
+        <div>
+          <p className="text-base text-muted-foreground">Hola, mi nombre es</p>
+          <h1 className="mt-2 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
+            Sihuen Lucas
+          </h1>
+          <p className="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground sm:text-base">
+            Soy desarrollador de software full-stack, especializado en sistemas
+            de gestión y modernización de legados. Llevo 5 años construyendo y
+            sosteniendo software en producción con clientes reales.
+          </p>
+        </div>
+      </div>
 
       <div className="mt-5 flex gap-2.5">
         {SOCIALS.map((s) => (
