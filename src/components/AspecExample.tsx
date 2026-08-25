@@ -21,11 +21,11 @@ export default function AspecExample() {
         x="1"
         y="1"
         width="398"
-        height="94"
+        height="158"
         strokeWidth="1"
         style={{ fill: "transparent", stroke: "hsl(var(--border))" }}
       />
-      <rect x="1" y="1" width="3" height="94" fill={PRIMARY} />
+      <rect x="1" y="1" width="3" height="158" fill={PRIMARY} />
 
       <text x="14" y="20" fontSize="10" fontWeight="700" fill={PRIMARY}>
         A.SPEC API-REST-CON-0001 · puente al legacy VB
