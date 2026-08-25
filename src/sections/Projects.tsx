@@ -54,19 +54,23 @@ export default function Projects() {
                   {p.name === "systutor-core" ? <CoreDiagram /> : <AspecExample />}
                 </span>
               ) : null}
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {p.description}
-              </p>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {p.meta.map((m) => (
-                  <span
-                    key={m}
-                    className="bg-accent px-2 py-0.5 text-[11px] text-muted-foreground"
-                  >
-                    {m}
-                  </span>
-                ))}
-              </div>
+              {p.name !== "systutor-shell" ? (
+                <>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {p.description}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {p.meta.map((m) => (
+                      <span
+                        key={m}
+                        className="bg-accent px-2 py-0.5 text-[11px] text-muted-foreground"
+                      >
+                        {m}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              ) : null}
             </>
           );
 
@@ -85,6 +89,19 @@ export default function Projects() {
                   {inner}
                 </a>
                 <ShellKit />
+                <div className="px-4 pb-4 text-muted-foreground">
+                  <p className="text-sm leading-relaxed">{p.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {p.meta.map((m) => (
+                      <span
+                        key={m}
+                        className="bg-accent px-2 py-0.5 text-[11px]"
+                      >
+                        {m}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             );
           }
