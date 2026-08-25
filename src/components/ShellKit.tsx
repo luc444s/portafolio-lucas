@@ -55,7 +55,7 @@ export default function ShellKit() {
           <Switch checked={on} onChange={(e) => setOn(e.target.checked)} />
           <span>{on ? "on" : "off"}</span>
         </label>
-        <Badge>{on ? "live demo" : "aún así flat"}</Badge>
+        <Badge>{"live demo"}</Badge>
       </div>
     </div>
   );
