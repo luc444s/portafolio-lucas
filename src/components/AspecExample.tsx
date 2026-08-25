@@ -6,7 +6,10 @@ const ROWS = [
   ["WHY", "leer el legacy sin tocar SQL Server"],
   ["SCOPE", "solo scaffold + GET /api/health"],
   ["OUT OF SCOPE", "datos · auth · endpoints (0002+)"],
-  ["VERIFY", "curl /api/health → 200 ok"],
+  ["CONTRACT", "listener en :8080 · health responde 200 json"],
+  ["INVARIANTS", "ERP WinForms y datos SQL Server intactos"],
+  ["ROLLBACK", "quitar el proyecto del .sln · cero efecto en BD"],
+  ["VERIFY", "build limpio + curl /api/health → 200 ok"],
 ];
 
 export default function AspecExample() {
@@ -33,22 +36,22 @@ export default function AspecExample() {
 
       {ROWS.map(([k, v], i) => (
         <g key={k}>
-          <text x="14" y={36 + i * 13} fontSize="8.5" fontWeight="600" fill={PRIMARY}>
+          <text x="14" y={38 + i * 16} fontSize="8.5" fontWeight="600" fill={PRIMARY}>
             {k}
           </text>
-          <text x="98" y={36 + i * 13} fontSize="8.5" style={FG}>
+          <text x="98" y={38 + i * 16} fontSize="8.5" style={FG}>
             {v}
           </text>
         </g>
       ))}
 
-      <line x1="1" y1="80" x2="399" y2="80" stroke="hsl(var(--border))" strokeWidth="1" />
+      <line x1="1" y1="142" x2="399" y2="142" stroke="hsl(var(--border))" strokeWidth="1" />
       {["DEFINE", "BOUND", "CONTRACT", "IMPLEMENT", "VERIFY", "INTEGRATE"].map(
         (step, i) => (
           <g key={step}>
             <text
               x={45 + i * 62}
-              y={90}
+              y={152}
               fontSize="7"
               fontWeight="600"
               textAnchor="middle"
@@ -57,7 +60,7 @@ export default function AspecExample() {
               {step}
             </text>
             {i < 5 ? (
-              <text x={76 + i * 62} y={90} fontSize="7" style={MUTED}>
+              <text x={76 + i * 62} y={152} fontSize="7" style={MUTED}>
                 →
               </text>
             ) : null}

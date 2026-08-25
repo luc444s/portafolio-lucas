@@ -31,7 +31,7 @@ export const projects: Project[] = [
     tag: "público",
     tagKind: "public",
     description:
-      "Metodología ADD: cada cambio como unidad mínima, trazable y reversible. El ejemplo real de abajo es una A.SPEC del ERP.",
+      "Metodología ADD: cada cambio como unidad mínima, trazable y reversible. El ejemplo real de arriba es una A.SPEC del ERP.",
     meta: ["6 fases", "7 skills", "54 A.SPECs", "comunidad"],
   },
   {
