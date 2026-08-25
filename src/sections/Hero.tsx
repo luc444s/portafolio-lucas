@@ -1,3 +1,7 @@
+import { useEffect, useState } from "react";
+import { useThemeStore } from "@themes";
+import { THEME_LABELS } from "../data/theme-labels";
+
 const GITHUB_PATH =
   "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12";
 
@@ -13,38 +17,147 @@ const SOCIALS = [
   },
 ];
 
-export default function Hero() {
-  return (
-    <div>
-      <h1 className="text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
-        Hola, mi nombre es Sihuen Lucas
-      </h1>
-      <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
-        Soy desarrollador de software full-stack, especializado en sistemas de
-        gestión y modernización de legados. Llevo 5 años construyendo y
-        sosteniendo software en producción con clientes reales.
-      </p>
+const NEOFETCH_ROWS: [string, string][] = [
+  ["OS", "Linux mint 22.2"],
+  ["Kernel", "Linux 6.17.0"],
+  ["Stack", "Python·React·Postgre"],
+  ["Uptime", "5 años"],
+  ["Shell", "zellij + nvim"],
+];
 
-      <div className="mt-5 flex gap-2.5">
-        {SOCIALS.map((s) => (
-          <a
-            key={s.title}
-            href={s.href}
-            title={s.title}
-            target={s.href.startsWith("http") ? "_blank" : undefined}
-            rel={
-              s.href.startsWith("http")
-                ? "noopener noreferrer"
-                : undefined
-            }
-            className="flex h-10 w-10 items-center justify-center border border-border bg-card text-foreground/70 transition-colors hover:border-primary hover:text-primary"
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-              <path d={s.path} />
-            </svg>
-          </a>
-        ))}
+function Terminal() {
+  const theme = useThemeStore((s) => s.theme);
+  const [revealed, setRevealed] = useState(0);
+  const total = NEOFETCH_ROWS.length + 1;
+
+  useEffect(() => {
+    if (revealed >= total) return;
+    const t = setTimeout(
+      () => setRevealed((r) => r + 1),
+      revealed === 0 ? 500 : 160,
+    );
+    return () => clearTimeout(t);
+  }, [revealed, total]);
+
+  const themeShown = revealed > NEOFETCH_ROWS.length;
+
+  return (
+    <div className="border border-border bg-card font-jetbrains text-card-foreground">
+      <div className="flex items-center gap-1.5 border-b border-border px-3 py-2">
+        <span className="h-2.5 w-2.5 bg-[#ff5f56]" />
+        <span className="h-2.5 w-2.5 bg-[#ffbd2e]" />
+        <span className="h-2.5 w-2.5 bg-[#27c93f]" />
+        <span className="ml-2 text-xs text-muted-foreground">sihuen@dev</span>
+      </div>
+      <div className="space-y-3 p-6 text-sm leading-relaxed">
+        <div className="text-muted-foreground">
+          <span className="text-primary">$</span> neofetch
+          {!themeShown ? (
+            <span className="cursor-blink text-primary">▮</span>
+          ) : null}
+        </div>
+        {revealed > 0 ? (
+          <div className="grid grid-cols-[5rem_1fr] gap-x-3 gap-y-1.5">
+            {NEOFETCH_ROWS.map(([label, value], i) =>
+              i < revealed ? (
+                <FragmentRow
+                  key={label}
+                  label={label}
+                  value={value}
+                  reveal
+                />
+              ) : null,
+            )}
+            {themeShown ? (
+              <>
+                <span className="reveal text-muted-foreground">Theme</span>
+                <span className="reveal text-foreground">
+                  {THEME_LABELS[theme]}{" "}
+                  <span className="cursor-blink text-primary">▮</span>
+                </span>
+              </>
+            ) : null}
+          </div>
+        ) : null}
+      </div>
+      <div className="flex items-center justify-between border-t border-border bg-primary px-3 py-1.5 text-xs text-primary-foreground">
+        <span className="flex items-center gap-2">
+          <span>[0]</span>
+          <span className="rounded-none border border-primary-foreground/40 px-1">
+            0:zsh*
+          </span>
+          <span className="border border-primary-foreground/40 px-1">
+            1:neofetch
+          </span>
+        </span>
+        <span>● sihuen@dev — 0:zsh* — ~</span>
       </div>
     </div>
+  );
+}
+
+function FragmentRow({
+  label,
+  value,
+  reveal,
+}: {
+  label: string;
+  value: string;
+  reveal?: boolean;
+}) {
+  return (
+    <>
+      <span className={`text-muted-foreground ${reveal ? "reveal" : ""}`}>
+        {label}
+      </span>
+      <span className={`text-foreground ${reveal ? "reveal" : ""}`}>{value}</span>
+    </>
+  );
+}
+
+export default function Hero() {
+  return (
+    <section className="grid items-center gap-8 sm:grid-cols-2 sm:gap-6">
+      <div className="text-left">
+        <h1 className="text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
+          Hola, mi nombre es
+        </h1>
+        <h2 className="mt-1 text-5xl font-bold leading-tight tracking-tight text-primary sm:text-6xl">
+          SIHUEN LUCAS
+        </h2>
+        <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
+          Soy desarrollador de software full-stack, especializado en sistemas de
+          gestión y modernización de software legacy. Llevo 5 años construyendo y
+          sosteniendo software en producción con clientes reales.
+        </p>
+
+        <div className="mt-5 flex gap-2.5">
+          {SOCIALS.map((s) => (
+            <a
+              key={s.title}
+              href={s.href}
+              title={s.title}
+              target={s.href.startsWith("http") ? "_blank" : undefined}
+              rel={
+                s.href.startsWith("http")
+                  ? "noopener noreferrer"
+                  : undefined
+              }
+              className="flex h-10 w-10 items-center justify-center border border-border bg-card text-foreground/70 transition-colors hover:border-primary hover:text-primary"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
+                <path d={s.path} />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex justify-center sm:justify-end">
+        <div className="w-full max-w-lg">
+          <Terminal />
+        </div>
+      </div>
+    </section>
   );
 }

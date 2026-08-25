@@ -5,6 +5,7 @@ export type Project = {
   tagKind: "production" | "private" | "public";
   description: string;
   meta: string[];
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -18,12 +19,13 @@ export const projects: Project[] = [
     meta: ["Python", "FastAPI", "MIT"],
   },
   {
-    name: "SYSTUTOR OSS",
+    name: "SYSTUTOR GASES INDUSTRIALES",
     tag: "privado · producción",
     tagKind: "private",
     description:
       "ERP para empresa de gas envasado: ~150k líneas, 7 plugins, 120 permisos declarados. Clientes migrados desde el legacy, adquisición activa.",
     meta: ["FastAPI", "React", "Plugins"],
+    image: "/gases-screenshot.jpg",
   },
   {
     name: "atomic-driven-development",

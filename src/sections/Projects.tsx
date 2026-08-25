@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { projects, type Project } from "../data/projects";
 import CoreDiagram from "../components/CoreDiagram";
 import AspecExample from "../components/AspecExample";
@@ -19,6 +20,17 @@ const TAG_COLORS: Record<Project["tagKind"], string> = {
 };
 
 export default function Projects() {
+  const [modalImg, setModalImg] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!modalImg) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setModalImg(null);
+    }
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [modalImg]);
+
   return (
     <section className="mt-14">
       <SectionTitle>Proyectos</SectionTitle>
@@ -56,6 +68,20 @@ export default function Projects() {
               ) : null}
               {p.name !== "systutor-shell" ? (
                 <>
+                  {p.image ? (
+                    <button
+                      type="button"
+                      onClick={() => setModalImg(p.image!)}
+                      className="mb-3 block w-full cursor-zoom-in border border-border"
+                    >
+                      <img
+                        src={p.image}
+                        alt={`Captura de ${p.name}`}
+                        loading="lazy"
+                        className="w-full object-cover"
+                      />
+                    </button>
+                  ) : null}
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {p.description}
                   </p>
@@ -126,6 +152,36 @@ export default function Projects() {
           );
         })}
       </div>
+
+      {modalImg ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/90 p-4"
+          onClick={() => setModalImg(null)}
+        >
+          <button
+            type="button"
+            aria-label="Cerrar"
+            onClick={() => setModalImg(null)}
+            className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center border border-border bg-card text-foreground transition-colors hover:border-primary hover:text-primary"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="h-4 w-4 fill-none stroke-current"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+          <img
+            src={modalImg}
+            alt="Captura ampliada"
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-full max-w-full object-contain"
+          />
+        </div>
+      ) : null}
     </section>
   );
 }

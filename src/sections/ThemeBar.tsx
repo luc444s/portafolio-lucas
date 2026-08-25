@@ -1,14 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { useThemeStore, THEME_NAMES, type ThemeName } from "@themes";
-
-const LABELS: Record<ThemeName, string> = {
-  light: "Light",
-  dark: "Dark",
-  retro: "Retro SAP",
-  catpuccin_mocha: "Catpuccin Mocha",
-  nord: "Nord",
-  nord_dark: "Nord Dark",
-};
+import { useThemeStore, THEME_NAMES } from "@themes";
+import { THEME_LABELS as LABELS } from "../data/theme-labels";
 
 export default function ThemeBar() {
   const theme = useThemeStore((s) => s.theme);

@@ -17,7 +17,17 @@ export default function Footer() {
 
       <div className="flex flex-wrap justify-between gap-2 border-t border-border py-5 text-xs text-muted-foreground">
         <span>© 2026 Sihuen Lucas — github.com/luc444s</span>
-        <span>Construido con React + Vite + @systutor/shell</span>
+        <span>
+          Construido con React + Vite + @systutor/shell —{" "}
+          <a
+            href="https://github.com/luc444s/portafolio-lucas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary transition-colors hover:underline"
+          >
+            github.com/luc444s/portafolio-lucas
+          </a>
+        </span>
       </div>
     </footer>
   );
