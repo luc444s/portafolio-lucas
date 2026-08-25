@@ -47,7 +47,12 @@ export default function Projects() {
                 </span>
               </h3>
               {p.name === "systutor-shell" ? (
-                <ShellKit />
+                <span
+                  onClick={(e) => e.preventDefault()}
+                  className="block cursor-default"
+                >
+                  <ShellKit />
+                </span>
               ) : p.name === "systutor-core" || p.name === "atomic-driven-development" ? (
                 <span
                   onClick={(e) => e.preventDefault()}
