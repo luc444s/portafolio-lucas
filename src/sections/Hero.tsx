@@ -20,7 +20,7 @@ export default function Hero() {
         <img
           src="/portafolio.jpg"
           alt="Sihuen Lucas"
-          className="h-28 w-28 shrink-0 border border-border object-cover object-top sm:h-40 sm:w-36"
+          className="h-44 w-44 shrink-0 border border-border object-cover object-top sm:h-[200px] sm:w-[200px]"
         />
         <div>
           <p className="text-base text-muted-foreground">Hola, mi nombre es</p>
