@@ -15,7 +15,7 @@ const ROWS = [
 export default function AspecExample() {
   return (
     <svg
-      viewBox="0 0 400 96"
+      viewBox="0 0 400 160"
       className="my-3 w-full"
       role="img"
       aria-label="Ejemplo de una A.SPEC real del proyecto"
