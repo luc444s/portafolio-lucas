@@ -47,17 +47,17 @@ export default function AspecExample() {
         (step, i) => (
           <g key={step}>
             <text
-              x={14 + i * 66}
+              x={45 + i * 62}
               y={84}
-              fontSize="7.5"
+              fontSize="7"
               fontWeight="600"
-              textAnchor={i === 0 ? "start" : i === 5 ? "end" : "middle"}
+              textAnchor="middle"
               style={i === 4 ? { fill: PRIMARY } : MUTED}
             >
               {step}
             </text>
             {i < 5 ? (
-              <text x={14 + 62 + i * 66} y={84} fontSize="7.5" style={MUTED}>
+              <text x={76 + i * 62} y={84} fontSize="7" style={MUTED}>
                 →
               </text>
             ) : null}
