@@ -46,14 +46,7 @@ export default function Projects() {
                   {p.tag}
                 </span>
               </h3>
-              {p.name === "systutor-shell" ? (
-                <span
-                  onClick={(e) => e.preventDefault()}
-                  className="block cursor-default"
-                >
-                  <ShellKit />
-                </span>
-              ) : p.name === "systutor-core" || p.name === "atomic-driven-development" ? (
+              {p.name === "systutor-core" || p.name === "atomic-driven-development" ? (
                 <span
                   onClick={(e) => e.preventDefault()}
                   className="block cursor-default"
@@ -76,6 +69,25 @@ export default function Projects() {
               </div>
             </>
           );
+
+          if (p.name === "systutor-shell") {
+            return (
+              <div
+                key={p.name}
+                className="border border-border bg-card transition-colors hover:border-primary"
+              >
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 pb-0 text-foreground transition-colors hover:text-primary"
+                >
+                  {inner}
+                </a>
+                <ShellKit />
+              </div>
+            );
+          }
 
           return p.url ? (
             <a
