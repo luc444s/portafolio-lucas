@@ -12,7 +12,7 @@ const SOCIALS = [
   { title: "GitHub", href: "https://github.com/luc444s", path: GITHUB_PATH },
   {
     title: "WhatsApp",
-    href: "https://wa.me/506968313965",
+    href: "https://wa.me/51968313956",
     path: WHATSAPP_PATH,
   },
 ];
