@@ -1,5 +1,5 @@
 # build
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@11.10.0 --activate
 COPY . .
